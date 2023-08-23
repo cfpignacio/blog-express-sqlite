@@ -11,7 +11,9 @@ app.use('/', (req: Request, res: Response) => {
 		mgs: 'Servidor funcionando OK 🚀🚀',
 	});
 });
+
 app.use('/noticia', noticiasRoutes);
+
 app.listen(3000, () => {
-	console.log('Servidor funcionando OK🚀🚀');
+	console.log('Servidor funcionando OK 🚀🚀 EN EL PORT 3000');
 });
