@@ -1,10 +1,5 @@
 import express from 'express';
-import {
-	borrarNoticia,
-	crearNoticia,
-	listarNoticia,
-	obtenerNoticiaId,
-} from './noticia.service';
+import { crearNoticia, listarNoticia } from './noticia.service';
 
 const noticiasRoutes = express.Router();
 
@@ -15,11 +10,11 @@ noticiasRoutes.post('/', crearNoticia);
 
 noticiasRoutes.get('/', listarNoticia);
 
-// [GET] endpoint obtener noticia por id /:id
+// // [GET] endpoint obtener noticia por id /:id
 
-noticiasRoutes.get('/:id', obtenerNoticiaId);
+// noticiasRoutes.get('/:id', obtenerNoticiaId);
 
-// [DELETE] endpoint borrar
-noticiasRoutes.delete('/:id', borrarNoticia);
+// // [DELETE] endpoint borrar
+// noticiasRoutes.delete('/:id', borrarNoticia);
 
 export default noticiasRoutes;

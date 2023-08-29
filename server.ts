@@ -16,13 +16,6 @@ const app: Express = express();
 
 app.use(bodyParser.json());
 
-app.use('/', async (req: Request, res: Response) => {
-	res.json({
-		mgs: 'Servidor funcionando OK 🚀🚀',
-	});
-	res.status(201).json({ success: true });
-});
-
 app.use('/noticia', noticiasRoutes);
 
 app.listen(3000, () => {
