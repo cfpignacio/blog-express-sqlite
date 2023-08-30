@@ -18,6 +18,7 @@ export const crearNoticia = async (req: Request, res: Response) => {
 			msg: `Se creo la noticia correctamente con el id: ${result.id}`,
 		});
 	} catch (error) {
+		console.error(error);
 		res.status(500).json({ msg: 'No se pudo guardar la noticia' });
 	}
 };
@@ -35,30 +36,35 @@ export const listarNoticia = async (req: Request, res: Response) => {
 };
 
 // // obtener noticia por id
-// export const obtenerNoticiaId = (req: Request, res: Response) => {
-// 	try {
-// 		const noticia = noticiaDB.find((n) => n.id === req.params.id);
-// 		if (!noticia) {
-// 			throw new Error();
-// 		}
-// 		res.json(noticia);
-// 	} catch (error) {
-// 		res.status(404).json({ msg: 'No se pudo encontrar la noticia' });
-// 	}
-// };
+export const obtenerNoticiaId = async (req: Request, res: Response) => {
+	try {
+		const noticiaRepository = await dbcontext.getRepository(Noticia);
+		const noticia = await noticiaRepository.findOneBy({ id: req.params.id });
+		if (!noticia) {
+			throw new Error();
+		}
+		res.json({ noticia });
+	} catch (error) {
+		res.status(404).json({ msg: 'No se pudo encontrar la noticia' });
+	}
+};
 
 // // eliminar noticia
-// export const borrarNoticia = (req: Request, res: Response) => {
-// 	const idDelete = req.params.id;
+export const borrarNoticia = async (req: Request, res: Response) => {
+	try {
+		const noticiaRepository = await dbcontext.getRepository(Noticia);
 
-// 	const indexToDelete = noticiaDB.findIndex(
-// 		(noticia) => noticia.id === idDelete
-// 	);
+		const noticiaBorrar = await noticiaRepository.delete(req.params.id);
 
-// 	if (indexToDelete === -1) {
-// 		res.status(404).json({ msg: 'Noticia no encontrada' });
-// 	} else {
-// 		noticiaDB.splice(indexToDelete, 1);
-// 		res.status(200).json({ msg: 'Noticia eliminada' });
-// 	}
-// };
+		if (!noticiaBorrar.affected) {
+			throw new Error('no se afectaron columnas');
+		}
+
+		res.json({ msg: 'Noticia borrada correctamente.' });
+	} catch (error) {
+		console.error(error);
+		res.status(404).json({ msg: 'No se pudo borrar la noticia' });
+	}
+};
+
+// update
