@@ -2,7 +2,9 @@ import express, { Express, Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import noticiasRoutes from './modules/noticias/notica.routes';
 import { dbcontext } from './modules/db/dbcontext';
-
+process.env.TZ = 'America/Argentina/Buenos_Aires';
+const time = new Date();
+console.log(time.toLocaleDateString());
 dbcontext
 	.initialize()
 	.then(() => {

@@ -23,6 +23,7 @@ noticiasRoutes.get('/:id', obtenerNoticiaId);
 // // [DELETE] endpoint borrar
 noticiasRoutes.delete('/:id', borrarNoticia);
 
+// [PATCH] endpoint update
 noticiasRoutes.patch('/:id', actulizarNoticia);
 
 export default noticiasRoutes;

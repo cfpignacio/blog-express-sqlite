@@ -67,27 +67,23 @@ export const borrarNoticia = async (req: Request, res: Response) => {
 	}
 };
 
-// update
-
+// put update
 export const actulizarNoticia = async (req: Request, res: Response) => {
 	try {
 		const noticiaRepository = await dbcontext.getRepository(Noticia);
 
 		const idNoticia = req.params.id;
-		const nuevaNoticia: iNoticia = req.body;
+		const updateNoticia: iNoticia = req.body;
 
-		const updateNoticia = await noticiaRepository.update(
-			idNoticia,
-			nuevaNoticia
-		);
+		const result = await noticiaRepository.update(idNoticia, updateNoticia);
 
-		if (!updateNoticia.affected) {
-			throw new Error('no se afectaron columnas');
+		if (!result.affected) {
+			throw new Error('No se puedo actulizar la noticia');
 		}
 
-		res.json({ msg: 'Noticia actulizada correctamente.' });
+		res.json({ msg: 'Noticia actulizada correctamente!!' });
 	} catch (error) {
-		console.error(error);
-		res.status(404).json({ msg: 'No se pudo borrar la noticia' });
+		console.log(error);
+		res.status(404).json({ msg: 'No se puedo actulizar la noticia' });
 	}
 };
