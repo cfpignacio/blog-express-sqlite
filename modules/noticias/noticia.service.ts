@@ -39,7 +39,10 @@ export const listarNoticia = async (req: Request, res: Response) => {
 export const obtenerNoticiaId = async (req: Request, res: Response) => {
 	try {
 		const noticiaRepository = await dbcontext.getRepository(Noticia);
-		const noticia = await noticiaRepository.findOneBy({ id: req.params.id });
+		const noticia = await noticiaRepository.findOne({
+			where: { id: req.params.id },
+			relations: ['comentarios'],
+		});
 		if (!noticia) {
 			throw new Error();
 		}
