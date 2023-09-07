@@ -7,19 +7,19 @@ import { Noticia } from '../noticias/noticia.entity';
 export const crearComentario = async (req: Request, res: Response) => {
 	try {
 		const comentarioRepository = await dbcontext.getRepository(Comentario);
-		const noticiaRepository = await dbcontext.getRepository(Noticia);
+		// const noticiaRepository = await dbcontext.getRepository(Noticia);
 
 		const data: iComentario = req.body;
 
-		const noticia = await noticiaRepository.findOneBy({ id: data.noticiaId });
+		// const noticia = await noticiaRepository.findOneBy({ id: data.noticiaId });
 
-		if (!noticia) {
-			throw new Error('La noticia no existe');
-		}
+		// if (!noticia) {
+		// 	throw new Error('La noticia no existe');
+		// }
 
 		const result = await comentarioRepository.create({
 			comentario: data.comentario,
-			noticia: noticia,
+			noticia: { id: data.noticiaId },
 		});
 
 		const saveComenatario = await comentarioRepository.save(result);
