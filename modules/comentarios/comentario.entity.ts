@@ -18,6 +18,6 @@ export class Comentario {
 	@CreateDateColumn()
 	create_at: Date;
 
-	@ManyToOne(() => Noticia, (n) => n.comentarios)
+	@ManyToOne(() => Noticia, (n) => n.comentarios, { nullable: false })
 	noticia: Noticia;
 }
