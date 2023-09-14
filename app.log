@@ -1,0 +1,20 @@
+2023-09-14 19:52:46 [info]: Servidor funcionando OK 🚀 EN EL PORT 3000
+2023-09-14 19:53:22 [info]: Servidor funcionando OK 🚀 EN EL PORT 3000
+2023-09-14 19:55:07 [info]: Servidor funcionando OK 🚀 EN EL PORT 3000
+2023-09-14 19:55:09 [debug]: El ip ::1 ingrea a /noticia/be2810d3-6cb7-4e21-9aae-4624c6b9b48ad
+2023-09-14 19:55:09 [error]: No se puedo obtener la noticia con id be2810d3-6cb7-4e21-9aae-4624c6b9b48ad desde el ip ::1 
+2023-09-14 19:55:22 [info]: Servidor funcionando OK 🚀 EN EL PORT 3000
+2023-09-14 19:55:23 [error]: No se puedo obtener la noticia con id be2810d3-6cb7-4e21-9aae-4624c6b9b48ad desde el ip ::1 
+2023-09-14 19:55:43 [info]: Servidor funcionando OK 🚀 EN EL PORT 3000
+2023-09-14 19:55:44 [debug]: El ip ::1 ingrea a /noticia/be2810d3-6cb7-4e21-9aae-4624c6b9b48ad
+2023-09-14 19:55:44 [error]: No se puedo obtener la noticia con id be2810d3-6cb7-4e21-9aae-4624c6b9b48ad desde el ip ::1 
+2023-09-14 19:55:45 [debug]: El ip ::1 ingrea a /noticia/be2810d3-6cb7-4e21-9aae-4624c6b9b48ad
+2023-09-14 19:55:45 [error]: No se puedo obtener la noticia con id be2810d3-6cb7-4e21-9aae-4624c6b9b48ad desde el ip ::1 
+2023-09-14 19:57:15 [info]: Servidor funcionando OK 🚀 EN EL PORT 3000
+2023-09-14 19:57:22 [debug]: El ip ::1 ingrea a /noticia/be2810d3-6cb7-4e21-9aae-4624c6b9b48a
+2023-09-14 19:57:43 [debug]: El ip ::1 ingrea a /comentario
+2023-09-14 19:57:53 [debug]: El ip ::1 ingrea a /noticia/9f4b1b2a-e483-4f38-9280-eee8e9ef038d
+2023-09-14 19:58:10 [info]: Servidor funcionando OK 🚀 EN EL PORT 3000
+2023-09-14 19:58:23 [debug]: El ip ::1 ingrea a /noticia
+2023-09-14 19:58:34 [debug]: El ip ::1 ingrea a /noticia/6d781151-3a94-4797-b519-58c0791528f2
+2023-09-14 19:58:34 [info]: el ip ::1 borro la noticia 6d781151-3a94-4797-b519-58c0791528f2
