@@ -81,3 +81,7 @@
 2023-09-18 19:58:49 [debug]: El ip ::1 ingrea a /noticia [GET]
 2023-09-18 19:59:18 [debug]: El ip ::1 ingrea a /noticia [GET]
 2023-09-18 19:59:26 [info]: Servidor funcionando OK 🚀 EN EL PORT 4000
+2023-09-18 19:59:35 [info]: Servidor funcionando OK 🚀 EN EL PORT 3000
+2023-09-18 20:00:12 [debug]: El ip ::1 ingrea a /noticia [GET]
+2023-09-18 20:00:23 [debug]: El ip ::1 ingrea a /noticia [GET]
+2023-09-18 20:00:28 [debug]: El ip ::1 ingrea a /noticia/2c9ed380-66b9-41cc-bd37-efe49b3f3aed [GET]
