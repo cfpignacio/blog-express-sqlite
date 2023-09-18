@@ -18,8 +18,9 @@ export const crearNoticia = async (req: Request, res: Response) => {
 		res.json({
 			msg: `Se creo la noticia correctamente con el id: ${result.id}`,
 		});
+		logger.debug(`Se creo la noticia ${JSON.stringify(nuevaNoticia)}`);
 	} catch (error) {
-		console.error(error);
+		logger.error(`no se pudo crear la noticia ${error}`);
 		res.status(500).json({ msg: 'No se pudo guardar la noticia' });
 	}
 };

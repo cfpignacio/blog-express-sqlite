@@ -1,4 +1,6 @@
 import { createLogger, format, transports } from 'winston';
+import dotenv from 'dotenv';
+dotenv.config();
 
 // Configuro formato del log
 const logFormat = format.combine(
@@ -9,7 +11,7 @@ const logFormat = format.combine(
 );
 
 const logger = createLogger({
-	level: 'debug', // nivel de registro ('debug','info', 'warn', 'error',)
+	level: process.env.BLOG_LOG_LEVEL, // nivel de registro ('debug','info', 'warn', 'error',)
 	format: logFormat,
 	transports: [
 		new transports.Console(),

@@ -6,7 +6,9 @@ import comentariosRoutes from './modules/comentarios/comentario.routes';
 import { logMiddleware } from './modules/middleware/logMiddleware';
 import logger from './modules/logger/logger';
 import { TypeORMError } from 'typeorm';
+import dotenv from 'dotenv';
 process.env.TZ = 'America/Argentina/Buenos_Aires';
+dotenv.config();
 
 dbcontext
 	.initialize()
@@ -16,7 +18,7 @@ dbcontext
 	});
 
 const app: Express = express();
-
+const PORT = process.env.BLOG_PORT;
 // mi primer Middleware
 // a nivel GLOBAL
 app.use(logMiddleware);
@@ -26,6 +28,6 @@ app.use(bodyParser.json());
 app.use('/noticia', noticiasRoutes);
 app.use('/comentario', comentariosRoutes);
 
-app.listen(3000, () => {
-	logger.info('Servidor funcionando OK 🚀 EN EL PORT 3000');
+app.listen(PORT, () => {
+	logger.info('Servidor funcionando OK 🚀 EN EL PORT ' + PORT);
 });
