@@ -16,7 +16,7 @@ export const login = async (req: Request, res: Response) => {
 		if (!buscarUsuario) {
 			throw new Error('Usuario/contraseña incorrecto');
 		}
-
+		// comparo las contreseñas
 		const compararPass = await bcrypt.compare(
 			dataRequest.pass,
 			buscarUsuario.pass
