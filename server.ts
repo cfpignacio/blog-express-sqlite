@@ -7,6 +7,7 @@ import { logMiddleware } from './modules/middleware/logMiddleware';
 import logger from './modules/logger/logger';
 import { TypeORMError } from 'typeorm';
 import dotenv from 'dotenv';
+import { usuarioRoutes } from './modules/usuarios/usuario.routes';
 process.env.TZ = 'America/Argentina/Buenos_Aires';
 dotenv.config();
 
@@ -27,7 +28,7 @@ app.use(bodyParser.json());
 
 app.use('/noticia', noticiasRoutes);
 app.use('/comentario', comentariosRoutes);
-
+app.use('/usuario', usuarioRoutes);
 app.listen(PORT, () => {
 	logger.info('Servidor funcionando OK 🚀 EN EL PORT ' + PORT);
 });
