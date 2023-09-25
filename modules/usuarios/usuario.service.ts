@@ -9,6 +9,8 @@ export const crearUsuario = async (req: Request, res: Response) => {
 		const usuarioRepository = dbcontext.getRepository(Usuarios);
 
 		let usuarioData: IUsuario = req.body;
+
+		// migrar a la entidad
 		usuarioData.email = usuarioData.email.toLowerCase();
 
 		const usuario = await usuarioRepository.create(usuarioData);

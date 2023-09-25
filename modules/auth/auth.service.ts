@@ -8,7 +8,8 @@ export const login = async (req: Request, res: Response) => {
 	try {
 		const usuarioRepository = dbcontext.getRepository(Usuarios);
 		// primero busco al usuario
-		const dataRequest = req.body;
+		let dataRequest: Ilogin = req.body;
+		// pasar a min el email usuario
 		const buscarUsuario = await usuarioRepository.findOneBy({
 			email: dataRequest.email,
 		});
@@ -26,6 +27,7 @@ export const login = async (req: Request, res: Response) => {
 			msg: `El resultado del login fue : ${compararPass}`,
 		});
 	} catch (error) {
+		// implementar logging en modo ERROR
 		throw new Error('Usuario/contraseña incorrecto');
 	}
 };
