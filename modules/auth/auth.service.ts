@@ -30,10 +30,12 @@ export const login = async (req: Request, res: Response) => {
 
 		// Genero token
 		const payload = {
-			id_usuario: buscarUsuario.id,
-			email: buscarUsuario.email,
-			nombre: buscarUsuario.nombre,
-			apellido: buscarUsuario.apellido,
+			usuario: {
+				id_usuario: buscarUsuario.id,
+				email: buscarUsuario.email,
+				nombre: buscarUsuario.nombre,
+				apellido: buscarUsuario.apellido,
+			},
 		};
 
 		const token = generarTokenJWT(payload);
