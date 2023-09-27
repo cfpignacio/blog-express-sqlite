@@ -25,7 +25,7 @@ export const login = async (req: Request, res: Response) => {
 			buscarUsuario.pass
 		);
 		if (!compararPass) {
-			throw new Error();
+			throw new Error('Usuario/contraseña incorrecto');
 		}
 
 		// Genero token
@@ -37,12 +37,15 @@ export const login = async (req: Request, res: Response) => {
 		};
 
 		const token = generarTokenJWT(payload);
+
 		res.json({
 			token: token,
 		});
 	} catch (error) {
 		// implementar logging en modo ERROR
 		logger.error(error);
-		throw new Error('Usuario/contraseña incorrecto');
+		res.status(401).json({
+			msg: 'Usuario/contraseña incorrecto',
+		});
 	}
 };
