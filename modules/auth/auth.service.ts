@@ -4,7 +4,7 @@ import { Usuarios } from '../usuarios/usuarios.entity';
 import { Ilogin } from './auth.interfaces';
 import bcrypt from 'bcrypt';
 import logger from '../logger/logger';
-import { generarTokenJWT } from '../utils/jwt.service';
+import { generarTokenJWT } from './jwt.service';
 
 export const login = async (req: Request, res: Response) => {
 	try {
