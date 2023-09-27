@@ -10,7 +10,7 @@ export const crearUsuario = async (req: Request, res: Response) => {
 
 		let usuarioData: IUsuario = req.body;
 
-		// migrar a la entidad
+		// TODO: migrar a la entidad
 		usuarioData.email = usuarioData.email.toLowerCase();
 
 		const usuario = await usuarioRepository.create(usuarioData);
