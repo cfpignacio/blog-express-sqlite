@@ -11,5 +11,8 @@ export const verifyTokenMiddleware = (
 		return res.status(403).json({ msg: 'Token no proporcionado' });
 	}
 
+	// TODO: verificar que el token
+	// decode y enviar la informacion a la siguiente
+
 	next();
 };
