@@ -2,6 +2,7 @@ import {
 	Column,
 	CreateDateColumn,
 	Entity,
+	ManyToOne,
 	OneToMany,
 	PrimaryGeneratedColumn,
 	UpdateDateColumn,
@@ -27,4 +28,6 @@ export class Noticia {
 
 	@OneToMany(() => Comentario, (c) => c.noticia)
 	comentarios: Comentario[];
+
+	// TODO: RELACIONAR CON LA ENTIDAD USUARIO TAREA
 }
