@@ -5,6 +5,7 @@ import { Ilogin } from './auth.interfaces';
 import bcrypt from 'bcrypt';
 import logger from '../logger/logger';
 import { generarTokenJWT } from './jwt.service';
+import { IUsuario } from '../usuarios/usuario.interface';
 
 export const login = async (req: Request, res: Response) => {
 	try {
@@ -29,13 +30,11 @@ export const login = async (req: Request, res: Response) => {
 		}
 
 		// Genero token
-		const payload = {
-			usuario: {
-				id_usuario: buscarUsuario.id,
-				email: buscarUsuario.email,
-				nombre: buscarUsuario.nombre,
-				apellido: buscarUsuario.apellido,
-			},
+		const payload: IUsuario = {
+			id: buscarUsuario.id,
+			email: buscarUsuario.email,
+			nombre: buscarUsuario.nombre,
+			apellido: buscarUsuario.apellido,
 		};
 
 		const token = generarTokenJWT(payload);
