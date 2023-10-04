@@ -3,11 +3,13 @@ import {
 	Column,
 	CreateDateColumn,
 	Entity,
+	OneToMany,
 	PrimaryGeneratedColumn,
 	UpdateDateColumn,
 } from 'typeorm';
 
 import bcrypt from 'bcrypt';
+import { Noticia } from '../noticias/noticia.entity';
 
 @Entity()
 export class Usuarios {
@@ -31,6 +33,9 @@ export class Usuarios {
 
 	@UpdateDateColumn()
 	updated_at: Date;
+
+	@OneToMany(() => Noticia, (n) => n.usuario)
+	noticias: Noticia[];
 
 	@BeforeInsert()
 	async hashPassword() {

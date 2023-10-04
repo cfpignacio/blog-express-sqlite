@@ -8,6 +8,7 @@ import {
 	UpdateDateColumn,
 } from 'typeorm';
 import { Comentario } from '../comentarios/comentario.entity';
+import { Usuarios } from '../usuarios/usuarios.entity';
 
 @Entity()
 export class Noticia {
@@ -29,5 +30,6 @@ export class Noticia {
 	@OneToMany(() => Comentario, (c) => c.noticia)
 	comentarios: Comentario[];
 
-	// TODO: RELACIONAR CON LA ENTIDAD USUARIO TAREA
+	@ManyToOne(() => Usuarios, (u) => u.noticias, { nullable: false })
+	usuario: Usuarios;
 }

@@ -10,7 +10,10 @@ export const crearNoticia = async (req: Request, res: Response) => {
 		const nuevaNoticia: iNoticia = req.body;
 
 		// creamos la noticia sin guardar
-		const noticia = await noticiaRepository.create(nuevaNoticia);
+		const noticia = await noticiaRepository.create({
+			...nuevaNoticia,
+			usuario: { id: req.usuario.id },
+		});
 
 		// guardamos la noticia
 		const result = await noticiaRepository.save(noticia);
