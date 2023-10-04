@@ -18,7 +18,11 @@ export const crearNoticia = async (req: Request, res: Response) => {
 		res.json({
 			msg: `Se creo la noticia correctamente con el id: ${result.id}`,
 		});
-		logger.debug(`Se creo la noticia ${JSON.stringify(nuevaNoticia)}`);
+		logger.debug(
+			`El usuario con nombre : ${req.usuario.nombre} ${
+				req.usuario.apellido
+			} creo la noticia ${JSON.stringify(nuevaNoticia)}`
+		);
 	} catch (error) {
 		logger.error(`no se pudo crear la noticia ${error}`);
 		res.status(500).json({ msg: 'No se pudo guardar la noticia' });
@@ -67,6 +71,7 @@ export const borrarNoticia = async (req: Request, res: Response) => {
 		if (!noticiaBorrar.affected) {
 			throw new Error('no se afectaron columnas');
 		}
+
 		logger.info(`el ip ${req.ip} borro la noticia ${req.params.id}`);
 		res.json({ msg: 'Noticia borrada correctamente.' });
 	} catch (error) {
