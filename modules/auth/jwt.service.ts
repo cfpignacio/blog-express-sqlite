@@ -1,10 +1,9 @@
 import jwt from 'jsonwebtoken';
-import logger from '../logger/logger';
-import { IUsuario } from '../usuarios/usuario.interface';
+import { IjwtPayload } from './jwt.interfaces';
 
 const secret = process.env.SECRET_JWT || 'DefaultPassword';
 
-export const generarTokenJWT = (payload: IUsuario): string => {
+export const generarTokenJWT = (payload: IjwtPayload): string => {
 	const token = jwt.sign(payload, secret, { expiresIn: '2h' });
 	return token;
 };
