@@ -21,7 +21,9 @@ export const verifyTokenMiddleware = (
 			return res.status(401).json({ msg: 'Token no valido!!' });
 		}
 		// TODO: agregarlo al request NO ES TAREA
-		logger.debug(decoded.usuario.id_usuario);
+
+		req.usuario = decoded;
+		logger.debug(JSON.stringify(req.usuario));
 		next();
 	});
 };
