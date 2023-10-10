@@ -1,0 +1,13 @@
+10-10-2023 19:39:08 [error]: undefined
+10-10-2023 19:39:08 [debug]: El ip ::1 ingrea a /auth/login [POST]
+10-10-2023 19:39:08 [error]: undefined
+10-10-2023 19:41:01 [debug]: El ip ::1 ingrea a /auth/login [POST]
+10-10-2023 19:41:06 [debug]: El ip ::1 ingrea a /auth/login [POST]
+10-10-2023 19:41:48 [debug]: El ip ::1 ingrea a /noticia [POST]
+10-10-2023 19:41:48 [debug]: El usuario con nombre : ignacio camillucci creo la noticia {"titulo":"una noticia","contenido":"para probar usuarios"}
+10-10-2023 19:41:54 [debug]: El ip ::1 ingrea a /noticia [POST]
+10-10-2023 19:41:54 [debug]: El usuario con nombre : ignacio camillucci creo la noticia {"titulo":"una noticia 2","contenido":"para probar usuarios ignacio"}
+10-10-2023 19:42:15 [debug]: El ip ::1 ingrea a /noticia/my [GET]
+10-10-2023 19:42:15 [error]: No se puedo obtener la noticia con id my desde el ip ::1 
+10-10-2023 19:50:03 [debug]: true
+10-10-2023 20:01:20 [debug]: El ip ::1 ingrea a /noticia/ [GET]

@@ -1,0 +1,20 @@
+10-10-2023 18:58:46 [info]: Servidor funcionando OK 🚀 EN EL PORT 3000
+10-10-2023 19:34:25 [info]: Servidor funcionando OK 🚀 EN EL PORT 3000
+10-10-2023 19:34:53 [debug]: El ip ::1 ingrea a /login [POST]
+10-10-2023 19:35:13 [debug]: El ip ::1 ingrea a /login [POST]
+10-10-2023 19:35:21 [debug]: El ip ::1 ingrea a /auth/login [POST]
+10-10-2023 19:35:21 [error]: undefined
+10-10-2023 19:35:28 [debug]: El ip ::1 ingrea a /auth/login [POST]
+10-10-2023 19:35:28 [error]: undefined
+10-10-2023 19:35:33 [debug]: El ip ::1 ingrea a /auth/login [POST]
+10-10-2023 19:35:33 [error]: undefined
+10-10-2023 19:35:38 [debug]: El ip ::1 ingrea a /auth/login [POST]
+10-10-2023 19:35:38 [error]: undefined
+10-10-2023 19:37:21 [debug]: El ip ::1 ingrea a /usuario [POST]
+10-10-2023 19:37:34 [debug]: El ip ::1 ingrea a /auth/login [POST]
+10-10-2023 19:37:34 [error]: undefined
+10-10-2023 19:37:43 [debug]: El ip ::1 ingrea a /auth/login [POST]
+10-10-2023 19:37:43 [error]: undefined
+10-10-2023 19:39:07 [debug]: El ip ::1 ingrea a /auth/login [POST]
+10-10-2023 19:39:07 [error]: undefined
+10-10-2023 19:39:08 [debug]: El ip ::1 ingrea a /auth/login [POST]

@@ -103,3 +103,23 @@ export const actulizarNoticia = async (req: Request, res: Response) => {
 		res.status(404).json({ msg: 'No se puedo actulizar la noticia' });
 	}
 };
+
+// 1 crear endpoint que muestre solo las noticias del usuario logueado
+// 2 proteger con el middleware de verificacion los endpoint necesarios
+
+export const listarNoticiaByUsuario = async (req: Request, res: Response) => {
+	try {
+		const noticiaRepository = await dbcontext.getRepository(Noticia);
+		const noticias = await noticiaRepository.find({
+			where: { usuario: { id: req.usuario.id } },
+			order: {
+				create_at: 'DESC',
+			},
+		});
+
+		res.json({ data: noticias, cantidad: noticias.length });
+	} catch (error) {
+		console.log(error);
+		res.status(500).json({ msg: 'No se pudo obtener un listado de noticias' });
+	}
+};

@@ -17,7 +17,6 @@ export const login = async (req: Request, res: Response) => {
 		const buscarUsuario = await usuarioRepository.findOneBy({
 			email: dataRequest.email,
 		});
-
 		if (!buscarUsuario) {
 			throw new Error('Usuario/contraseña incorrecto');
 		}
