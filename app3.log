@@ -1,0 +1,1 @@
+11-10-2023 19:38:43 [error]: Error al iniciar la base de datos: ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'172.17.0.1' (using password: YES)

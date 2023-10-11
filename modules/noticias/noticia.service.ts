@@ -104,9 +104,6 @@ export const actulizarNoticia = async (req: Request, res: Response) => {
 	}
 };
 
-// 1 crear endpoint que muestre solo las noticias del usuario logueado
-// 2 proteger con el middleware de verificacion los endpoint necesarios
-
 export const listarNoticiaByUsuario = async (req: Request, res: Response) => {
 	try {
 		const noticiaRepository = await dbcontext.getRepository(Noticia);
