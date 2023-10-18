@@ -1,3 +1,10 @@
-11-10-2023 20:19:12 [debug]: El ip ::1 ingrea a /comentario [POST]
-11-10-2023 20:23:55 [info]: Servidor funcionando OK 🚀 EN EL PORT 3000
-11-10-2023 20:23:55 [debug]: El ip ::1 ingrea a /comentario [POST]
+18-10-2023 20:11:16 [debug]: El ip ::1 ingrea a /noticia/?titulo=usuando&contenido=usuando [GET]
+18-10-2023 20:11:16 [debug]: undefined
+18-10-2023 20:11:23 [debug]: El ip ::1 ingrea a /noticia/?id=15f6113f-0540-49c0-900a-087f0efaacdd&contenido=usuando [GET]
+18-10-2023 20:11:23 [debug]: 15f6113f-0540-49c0-900a-087f0efaacdd
+18-10-2023 20:11:32 [debug]: El ip ::1 ingrea a /noticia/?id=15f6113f-0540-49c0-900a-087f0efaacdd2&contenido=usuando [GET]
+18-10-2023 20:11:32 [debug]: 15f6113f-0540-49c0-900a-087f0efaacdd2
+18-10-2023 20:11:36 [debug]: El ip ::1 ingrea a /noticia/?id=15f6113f-0540-49c0-900a-087f0efaacdd&contenido=usuando [GET]
+18-10-2023 20:11:36 [debug]: 15f6113f-0540-49c0-900a-087f0efaacdd
+18-10-2023 20:11:41 [debug]: El ip ::1 ingrea a /noticia/?id=15f6113f-0540-49c0-900a-087f0efaacdd [GET]
+18-10-2023 20:11:41 [debug]: 15f6113f-0540-49c0-900a-087f0efaacdd

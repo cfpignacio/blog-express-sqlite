@@ -1,11 +1,10 @@
 import express from 'express';
 import {
 	crearNoticia,
-	listarNoticia,
-	obtenerNoticiaId,
 	borrarNoticia,
 	actulizarNoticia,
 	listarNoticiaByUsuario,
+	obtenerNoticia,
 } from './noticia.service';
 import { verifyTokenMiddleware } from '../auth/auth.middleware';
 
@@ -14,13 +13,9 @@ const noticiasRoutes = express.Router();
 // endpoint para crear una noticia
 noticiasRoutes.post('/', verifyTokenMiddleware, crearNoticia);
 
-// endpoint para consultar todas las noticias
-
-noticiasRoutes.get('/', listarNoticia);
-
 // // [GET] endpoint obtener noticia por id /:id
 
-noticiasRoutes.get('/:id', obtenerNoticiaId);
+noticiasRoutes.get('/', obtenerNoticia);
 
 // [GET] endpoint para obtener noticias del usuario logueado
 noticiasRoutes.get('/my/all', verifyTokenMiddleware, listarNoticiaByUsuario);

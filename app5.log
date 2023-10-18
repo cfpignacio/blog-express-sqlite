@@ -1,0 +1,6 @@
+18-10-2023 20:06:40 [debug]: El ip ::1 ingrea a /noticia/?titulo=maria [GET]
+18-10-2023 20:06:40 [debug]: undefined
+18-10-2023 20:06:50 [debug]: El ip ::1 ingrea a /noticia/?titulo=noti [GET]
+18-10-2023 20:06:50 [debug]: undefined
+18-10-2023 20:06:53 [debug]: El ip ::1 ingrea a /noticia/ [GET]
+18-10-2023 20:06:53 [debug]: undefined

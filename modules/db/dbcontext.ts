@@ -7,7 +7,7 @@ export const dbcontext = new DataSource({
 	username: 'root',
 	password: '123456',
 	database: 'blog',
-	logging: false,
+	logging: true,
 	synchronize: true,
 	entities: [__dirname + '/../**/*.entity.{js,ts}'],
 });
