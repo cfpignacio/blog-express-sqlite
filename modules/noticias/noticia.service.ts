@@ -40,11 +40,16 @@ export const obtenerNoticia = async (req: Request, res: Response) => {
 		const contenido = req.query.contenido?.toString();
 		const idNoticia = req.query.id?.toString();
 		const noticiaRepository = await dbcontext.getRepository(Noticia);
-		logger.debug(idNoticia);
-		const noticia = await noticiaRepository.findBy({
-			titulo: ILike(`%${titulo || ''}%`),
-			contenido: ILike(`%${contenido || ''}%`),
-			id: idNoticia,
+
+		const noticia = await noticiaRepository.find({
+			where: {
+				titulo: ILike(`%${titulo || ''}%`),
+				contenido: ILike(`%${contenido || ''}%`),
+				id: idNoticia,
+			},
+			relations: {
+				comentarios: true,
+			},
 		});
 
 		if (!noticia) {
